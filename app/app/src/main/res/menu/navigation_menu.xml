@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_dashboard"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Beranda"/>
+        <item android:id="@+id/nav_obat"
+            android:icon="@drawable/ic_data"
+            android:title="Data Obat"/>
+        <item android:id="@+id/nav_masuk"
+            android:icon="@drawable/ic_data"
+            android:title="Data Obat Masuk"/>
+        <item android:id="@+id/nav_keluar"
+            android:icon="@drawable/ic_data"
+            android:title="Data Obat Keluar"/>
+
+    </group>
+
+        <item android:title=" ">
+                <menu>
+                        <item android:id="@+id/nav_logout"
+                            android:icon="@drawable/ic_logout"
+                            android:title="Keluar"/>
+                </menu>
+        </item>
+</menu>
