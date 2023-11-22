@@ -1,5 +1,6 @@
 package com.codeathome.il_massiveproject_daydream
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.codeathome.il_massiveproject_daydream.databinding.ActivityLoginBinding
@@ -10,6 +11,12 @@ class Register : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_register)
+        setContentView(binding.root)
+
+        binding.btnRegister.setOnClickListener {
+            startActivity(Intent(this, Login::class.java))
+        }
+
+
     }
 }

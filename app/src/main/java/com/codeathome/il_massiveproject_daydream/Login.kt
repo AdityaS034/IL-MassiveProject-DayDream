@@ -16,7 +16,14 @@ class Login : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_login)
+        setContentView(binding.root)
+
+        binding.btnLogin.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+        binding.haventAccount.setOnClickListener {
+            startActivity(Intent(this, Register::class.java))
+        }
 
         etUsername = binding.edtEmail
         etPassword = binding.edtPassword

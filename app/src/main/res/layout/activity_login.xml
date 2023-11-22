@@ -9,10 +9,13 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="138dp"
+        android:layout_width="match_parent"
         android:layout_height="138dp"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
@@ -30,7 +33,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:layout_marginStart="30dp"
@@ -56,32 +59,46 @@
                 android:textAlignment="center"
                 android:textSize="25sp"
                 android:textStyle="bold" />
-
-            <EditText
-                android:id="@+id/edt_email"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_marginTop="40dp"
-                android:background="@color/white"
-                android:elevation="8dp"
+                android:layout_height="wrap_content"
+                android:text="Sistem Informasi Apotek"
+                android:gravity="center"
+                android:layout_marginTop="8dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:hint="Email"
-                android:padding="8dp"
+                android:layout_marginTop="8dp"
 
-                android:textColor="@color/black" />
+                >
 
-            <EditText
-                android:id="@+id/edt_password"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
-                android:layout_marginTop="20dp"
-                android:background="@color/white"
-                android:elevation="8dp"
+                android:layout_height="wrap_content"
                 android:hint="Password"
-                android:inputType="textPassword"
-                android:padding="8dp"
-                android:textColor="@color/black" />
+                android:layout_marginTop="12dp"
+
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
 
             <Button
                 android:id="@+id/btn_login"
@@ -92,30 +109,25 @@
                 android:text="Login"
                 android:textSize="15sp" />
 
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/havent_account"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="28dp"
-        android:text="Belum Punya Akun ?"
+        android:layout_gravity="center"
+
+        android:layout_marginStart="108dp"
+
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="108dp"
+        android:text="@string/dont_have_account"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
-    <TextView
-        android:id="@+id/btn_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="96dp"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="Daftar Sekarang"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
