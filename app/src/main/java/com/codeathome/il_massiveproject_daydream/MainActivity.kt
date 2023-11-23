@@ -1,24 +1,30 @@
 package com.codeathome.il_massiveproject_daydream
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.MenuItem
 import android.view.Window
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var drawerLayout: DrawerLayout
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
+
+
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
@@ -37,21 +43,25 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
+    private fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.fragment_container, fragment)
+            .addToBackStack(null)  // Jika Anda ingin menambahkan ke tumpukan kembali
+            .commit()
+    }
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.nav_dashboard -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, DashboardFragment()).commit()
-            R.id.nav_obat -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, ObatFragment()).commit()
-            R.id.nav_masuk -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, ObatMasukFragment()).commit()
-            R.id.nav_keluar -> supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, ObatKeluarFragment()).commit()
+            R.id.nav_dashboard -> replaceFragment(DashboardFragment())
+            R.id.nav_obat -> replaceFragment(ObatFragment())
+            R.id.nav_masuk -> replaceFragment(ObatMasukFragment())
+            R.id.nav_keluar -> replaceFragment(ObatKeluarFragment())
             R.id.nav_logout -> Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show()
         }
         drawerLayout.closeDrawer(GravityCompat.START)
         return true
     }
+
     override fun onBackPressed() {
         super.onBackPressed()
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
@@ -60,4 +70,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             onBackPressedDispatcher.onBackPressed()
         }
     }
+
+
+    fun onClickMasuk() {
+        val intent = Intent(this, TambahObatMasuk::class.java)
+        startActivity(intent)
+    }
+
 }
