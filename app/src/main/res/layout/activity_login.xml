@@ -20,16 +20,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/logo" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="263dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="12dp"
-        android:text="Medistock adalah perusahaan yang transparan dan dapat dipercaya dan mengamankan ekosistem bagi pembeli dan penjual di ekosistem farmasi"
-        android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+<!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="263dp"-->
+<!--        android:layout_height="75dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:text="Medistock adalah perusahaan yang transparan dan dapat dipercaya dan mengamankan ekosistem bagi pembeli dan penjual di ekosistem farmasi"-->
+<!--        android:textAlignment="center"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/imageView" />-->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -42,7 +42,7 @@
         app:cardElevation="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView">
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
 
         <LinearLayout
             android:layout_width="match_parent"
