@@ -1,4 +1,4 @@
-package com.coding.meet.navigationdrawerapp
+package com.coding.meet.medistockapp
 
 import org.junit.Test
 

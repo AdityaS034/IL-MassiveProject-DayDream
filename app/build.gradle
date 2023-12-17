@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace 'com.coding.meet.navigationdrawerapp'
+    namespace 'com.coding.meet.medistockapp'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.coding.meet.navigationdrawerapp"
+        applicationId "com.coding.meet.medistockapp"
         minSdk 21
         targetSdk 33
         versionCode 1
@@ -23,6 +23,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    buildFeatures {
+        viewBinding true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8

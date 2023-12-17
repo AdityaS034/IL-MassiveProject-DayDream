@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFEB3B"
-    tools:context=".fragments.SettingFragment">
+    android:background="@drawable/dataobat"
+    tools:context=".fragments.ObatMasuk">
 
     <TextView
         android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Setting Fragment"
+        android:text="Obat masuk"
         android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="@color/black"/>
 
-</FrameLayout>
+</RelativeLayout>

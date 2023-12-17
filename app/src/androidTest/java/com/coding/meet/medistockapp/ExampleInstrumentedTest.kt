@@ -1,4 +1,4 @@
-package com.coding.meet.navigationdrawerapp
+package com.coding.meet.medistockapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

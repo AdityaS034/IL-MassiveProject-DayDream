@@ -1,4 +1,4 @@
-package com.coding.meet.navigationdrawerapp
+package com.coding.meet.medistockapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,9 +12,10 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
-import com.coding.meet.navigationdrawerapp.fragments.HomeFragment
-import com.coding.meet.navigationdrawerapp.fragments.NotificationFragment
-import com.coding.meet.navigationdrawerapp.fragments.SettingFragment
+import com.coding.meet.medistockapp.fragments.Beranda
+import com.coding.meet.medistockapp.fragments.DataObat
+import com.coding.meet.medistockapp.fragments.ObatKeluar
+import com.coding.meet.medistockapp.fragments.ObatMasuk
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
@@ -59,26 +60,27 @@ class MainActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
 
 
         // Default Fragment Load and menu select
-        replaceFragment(HomeFragment())
+        replaceFragment(Beranda())
         navigationView.setCheckedItem(R.id.nav_home)
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId) {
             R.id.nav_home -> {
-                replaceFragment(HomeFragment())
-                title = "Home"
+                replaceFragment(Beranda())
+                title = "Beranda"
             }
-            R.id.nav_notification -> {
-                replaceFragment(NotificationFragment())
-                title = "Notification"
+            R.id.nav_obat-> {
+                replaceFragment(DataObat())
+                title = "Data Obat"
             }
-            R.id.nav_setting -> {
-                replaceFragment(SettingFragment())
-                title = "Setting"
+            R.id.nav_masuk -> {
+                replaceFragment(ObatMasuk())
+                title = "Obat Masuk"
             }
-            R.id.nav_share -> {
-                Toast.makeText(this,"Share",Toast.LENGTH_LONG).show()
+            R.id.nav_keluar -> {
+                replaceFragment(ObatKeluar())
+                title = "Obat Keluar"
             }
             R.id.nav_logout -> {
                 Toast.makeText(this,"Logout",Toast.LENGTH_LONG).show()

@@ -12,5 +12,5 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-rootProject.name = "Navigation Drawer App"
+rootProject.name = "Medistock"
 include ':app'

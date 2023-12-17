@@ -9,29 +9,29 @@
 
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_home_24"
-            android:title="Home" />
-        <item
-            android:id="@+id/nav_notification"
-            android:icon="@drawable/ic_notifications_24"
-            android:title="Notification" />
-        <item
-            android:id="@+id/nav_setting"
-            android:icon="@drawable/ic_settings_24"
-            android:title="Setting" />
+            android:icon="@drawable/ic_dashboard"
+            android:title="Beranda" />
+        <item android:id="@+id/nav_obat"
+            android:icon="@drawable/ic_data"
+            android:title="Data Obat"/>
+        <item android:id="@+id/nav_masuk"
+            android:icon="@drawable/ic_add"
+            android:title="Obat Masuk"/>
+        <item android:id="@+id/nav_keluar"
+            android:icon="@drawable/ic_out"
+            android:title="Obat Keluar"/>
     </group>
 
     <group
         android:id="@+id/group2"
         android:checkableBehavior="single">
-        <item
-            android:id="@+id/nav_share"
-            android:icon="@drawable/ic_share_24"
-            android:title="Share" />
-        <item
-            android:id="@+id/nav_logout"
-            android:icon="@drawable/ic_logout_24"
-            android:title="Logout" />
+        <item android:title=" ">
+            <menu>
+                <item android:id="@+id/nav_logout"
+                    android:icon="@drawable/ic_logout"
+                    android:title="Keluar"/>
+            </menu>
+        </item>
     </group>
 
 </menu>
