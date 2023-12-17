@@ -53,7 +53,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.nav_dashboard -> replaceFragment(DashboardFragment())
-            R.id.nav_obat -> replaceFragment(ObatFragment())
+            R.id.nav_obat -> replaceFragment(ObatMasukFragment())
             R.id.nav_masuk -> replaceFragment(ObatMasukFragment())
             R.id.nav_keluar -> replaceFragment(ObatKeluarFragment())
             R.id.nav_logout -> Toast.makeText(this, "Logout!", Toast.LENGTH_SHORT).show()

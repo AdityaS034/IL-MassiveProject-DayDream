@@ -50,7 +50,7 @@ class ObatKeluarFragment : Fragment() {
 
     private fun addInfo() {
         val inflater = LayoutInflater.from(requireActivity())
-        val v = inflater.inflate(R.layout.activity_tambah_obat_masuk, null)
+        val v = inflater.inflate(R.layout.activity_tambah_obat_keluar, null)
 
         val userName = v.findViewById<EditText>(R.id.edtNamaObat)
         val userNo = v.findViewById<EditText>(R.id.edtJumlahObat)
