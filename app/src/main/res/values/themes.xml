@@ -1,7 +1,7 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
 
-    <style name="Theme.NavigationDrawerApp" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="Theme.MedistockApp" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="colorPrimary">@color/blue1</item>
         <item name="colorPrimaryVariant">@color/blue2</item>
         <item name="colorOnPrimary">@color/black</item>
@@ -16,7 +16,7 @@
         </style>
 
     <!--    if action back use on all screen  -->
-    <style name="Theme.NavigationDrawerApp.NoActionBar">
+    <style name="Theme.MedistockApp.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
