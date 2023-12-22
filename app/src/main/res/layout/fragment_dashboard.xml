@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:orientation="vertical"
+    android:background="@drawable/header_beranda">
+
+
+    <TextView
+        android:id="@+id/tv_titleBeranda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="67dp"
+        android:gravity="center"
+        android:text="SISTEM INFORMASI APOTEK"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="161dp"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:padding="6dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titleBeranda"
+        tools:ignore="MissingConstraints">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="6dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_total_obat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="61dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="48dp"
+                    android:layout_marginRight="-44dp"
+                    android:layout_marginBottom="53dp"
+                    android:text="5"
+                    android:textSize="60sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="149dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_shape"
+                    android:backgroundTint="@color/blue4"
+                    android:text="Obat Masuk"
+                    android:textColor="@color/purple_700"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="6dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_obat_masuk"
+                    android:layout_width="99dp"
+                    android:layout_height="81dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="54dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="-61dp"
+                    android:layout_marginBottom="42dp"
+                    android:text="15"
+                    android:textSize="60sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="149dp"
+                    android:layout_height="36dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/button_shape"
+                    android:backgroundTint="@color/blue4"
+                    android:text="Obat Keluar"
+                    android:textColor="@color/purple_700"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="377dp"
+        android:layout_marginTop="-10dp"
+        android:orientation="vertical"
+        android:padding="6dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="20dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pg_obatBaru"
+                    android:layout_width="252dp"
+                    android:layout_height="86dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp"
+                    app:cardMaxElevation="5dp">
+
+                    <RelativeLayout
+                        android:id="@+id/btnobat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:onClick="homebtn"
+                        android:background="@color/blue4"
+                        android:clickable="true">
+
+                        <TextView
+                            android:id="@+id/tv_obatBaru"
+                            android:layout_width="197dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="7dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginEnd="49dp"
+                            android:layout_marginBottom="38dp"
+                            android:text="Daftar Obat"
+                            android:textColor="@color/purple_700"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_contentBaru"
+                            android:layout_width="220dp"
+                            android:layout_height="26dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="45dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="12dp"
+                            android:text="Menambahkan obat baru"
+                            android:textColor="@color/purple_700"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/img1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="204dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginEnd="17dp"
+                            android:layout_marginBottom="21dp"
+                            app:srcCompat="@drawable/ic_medicine" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pg_obatMasuk"
+                    android:layout_width="252dp"
+                    android:layout_height="86dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp"
+                    app:cardMaxElevation="5dp">
+
+                    <RelativeLayout
+                        android:id="@+id/btnobat1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:onClick="homebtn"
+                        android:background="@color/blue4"
+                        android:clickable="true">
+
+                        <TextView
+                            android:id="@+id/tv_obatMasuk"
+                            android:layout_width="190dp"
+                            android:layout_height="36dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="6dp"
+                            android:layout_marginTop="13dp"
+                            android:layout_marginEnd="57dp"
+                            android:layout_marginBottom="42dp"
+                            android:text="Obat Masuk"
+                            android:textColor="@color/purple_700"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_contentMasuk"
+                            android:layout_width="220dp"
+                            android:layout_height="26dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="45dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="12dp"
+                            android:text="Menambahkan obat masuk"
+                            android:textColor="@color/purple_700"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/img2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="204dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginEnd="17dp"
+                            android:layout_marginBottom="21dp"
+                            app:srcCompat="@drawable/ic_in" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pg_obatKeluar"
+                    android:layout_width="252dp"
+                    android:layout_height="86dp"
+                    android:layout_gravity="center|center_vertical"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp"
+                    app:cardMaxElevation="5dp">
+
+                    <RelativeLayout
+                        android:id="@+id/btnobat2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:onClick="homebtn"
+                        android:background="@color/blue4"
+                        android:clickable="true">
+
+                        <TextView
+                            android:id="@+id/tv_obatKeluar"
+                            android:layout_width="200dp"
+                            android:layout_height="37dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="48dp"
+                            android:layout_marginBottom="42dp"
+                            android:text="Obat Keluar"
+                            android:textColor="@color/purple_700"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_contentKeluar"
+                            android:layout_width="220dp"
+                            android:layout_height="26dp"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="45dp"
+                            android:layout_marginEnd="24dp"
+                            android:layout_marginBottom="12dp"
+                            android:text="Menambahkan obat keluar"
+                            android:textColor="@color/purple_700"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/img3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="204dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginEnd="17dp"
+                            android:layout_marginBottom="21dp"
+                            app:srcCompat="@drawable/ic_out" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
